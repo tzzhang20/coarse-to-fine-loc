@@ -26,9 +26,6 @@ include_directories(${CMAKE_SOURCE_DIR})
 add_executable(generate_desc generate_desc.cpp scancontext/Scancontext.cpp descriptor.cpp files.cpp) 
 target_link_libraries(generate_desc ${PCL_LIBRARIES} ${EIGEN3_LIBRARIES})
 
-add_executable(trace trace.cpp scancontext/Scancontext.cpp descriptor.cpp files.cpp)
-target_link_libraries(trace ${PCL_LIBRARIES} ${EIGEN3_LIBRARIES} -fopenmp)
-
 add_executable(trace2 trace2.cpp scancontext/Scancontext.cpp descriptor.cpp files.cpp registration.cpp datasource.cpp)
 target_link_libraries(trace2 -fopenmp ${PCL_LIBRARIES} ${EIGEN3_LIBRARIES})
 
